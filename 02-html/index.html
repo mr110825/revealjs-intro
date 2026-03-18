@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>reveal.js 入門</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/theme/black.css">
+
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+      <!-- ===== 1枚目: タイトル ===== -->
+      <section>
+        <h1>Hello, reveal.js</h1>
+      </section>
+
+      <!-- ===== 2枚目: reveal.jsの説明 ===== -->
+      <!-- <h2> = 2番目の見出し。<p> = 段落（パラグラフ） -->
+      <section>
+        <h2>reveal.jsとは</h2>
+        <p>HTML・CSS・JSで作るプレゼンテーションフレームワーク</p>
+      </section>
+
+      <!-- ===== 3枚目: 箇条書き ===== -->
+      <!-- <ul> = 順序なしリスト（Unordered List）、<li> = リスト項目（List Item） -->
+      <!-- <ul> を <ol>（Ordered List）に変えると番号付きリストになる -->
+      <section>
+        <h2>reveal.jsの特徴</h2>
+        <ul>
+          <li>HTMLファイル1つで動く</li>
+          <li>テーマを切り替えられる</li>
+          <li>スピーカーノートが使える</li>
+          <li>LLMと相性が良い</li>
+        </ul>
+      </section>
+
+      <!-- ===== 4枚目: リンクと画像 ===== -->
+      <!-- <a> = リンク。href にURL、target="_blank" で別タブ -->
+      <!-- <img> = 画像。src にURL、alt に代替テキスト、width でサイズ調整 -->
+      <!-- <br> = 改行 -->
+      <section>
+        <h2>参考リンク</h2>
+        <a href="https://revealjs.com/" target="_blank">reveal.js 公式サイト</a>
+        <br>
+        <img src="https://revealjs.com/images/logo/reveal-black-text-sticker.png" alt="reveal.js ロゴ" width="300">
+      </section>
+
+      <!-- ===== 5枚目: テキストの強調 ===== -->
+      <!-- <strong> = 太字（重要なキーワード）、<em> = 斜体（補足的な強調） -->
+      <section>
+        <h2>テキストの強調</h2>
+        <p>reveal.jsは<strong>HTML・CSS</strong>で作るフレームワークです。</p>
+        <p><em>予備知識は不要</em>で始められます。</p>
+      </section>
+
+      <!-- ===== 6枚目: コードの表示 ===== -->
+      <!-- <code> = インラインコード、<pre> = 整形済みテキスト（改行・空白を保持） -->
+      <!-- <pre><code> の組み合わせでコードブロックになる -->
+      <section>
+        <h2>コードの表示</h2>
+        <p>インラインコード: <code>console.log("Hello")</code> タグ</p>
+        <pre><code>const name = "reveal.js";<br>console.log("Hello, " + name);</code></pre>
+      </section>
+
+      <!-- ===== 7枚目: 引用 ===== -->
+      <!-- <blockquote> = 引用。テーマによってインデントや装飾が自動で付く -->
+      <section>
+        <h2>引用</h2>
+        <blockquote>
+          HTML・CSSは"Webサイトを作る技術"ではなく、画面に表示するものをデザインする技術。
+        </blockquote>
+      </section>
+
+      <!-- ===== 8枚目: 段階表示（reveal.js固有） ===== -->
+      <!-- class="fragment" を付けるとクリックで1つずつ表示される（PowerPointのアニメーション相当） -->
+      <section>
+        <h2>段階表示(fragment)</h2>
+        <p class="fragment">1. セットアップ（CDN + 最小構成）</p>
+        <p class="fragment">2. HTML基礎</p>
+        <p class="fragment">3. CSS基礎</p>
+        <p class="fragment">4. Bootstrap</p>
+      </section>
+
+      <!-- ===== 9枚目: 背景色の変更（reveal.js固有） ===== -->
+      <!-- data-background-color で スライドごとに背景色を指定できる -->
+      <!-- 色は16進数カラーコード（#RRGGBB）で指定。#f0f0f0 = 白に近いグレー -->
+      <section data-background-color="#f0f0f0">
+        <h2>背景色の変更</h2>
+        <p>data-background-color でスライドごとに背景色を変えられる</p>
+      </section>
+
+      <!-- ===== 10枚目: 縦スライド（reveal.js固有） ===== -->
+      <!-- <section> の中に <section> をネストすると縦方向のスライドになる -->
+      <!-- 外側の section = 列（→キー）、内側の section = 行（↓キー） -->
+      <section>
+        <section>
+          <h2>縦スライド1枚目</h2>
+          <p>下キーで次へ</p>
+        </section>
+        <section>
+          <h2>縦スライド2枚目</h2>
+          <p>sectionをネストすると縦方向に遷移できる</p>
+        </section>
+      </section>
+
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.js"></script>
+  <!-- スピーカーノート用プラグイン（Sキーでノート画面を開く） -->
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/notes/notes.js"></script>
+  <script>
+    Reveal.initialize({
+      plugins: [RevealNotes]
+    });
+  </script>
+</body>
+</html>

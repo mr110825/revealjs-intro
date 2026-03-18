@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>reveal.js 入門</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/theme/dracula.css">
+  <!-- Google Fonts（外部フォント読み込み。link 1行でフォントを変更できる） -->
+  <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
+
+<!-- <style> = CSS をHTML内に直接書く方法。実務では外部CSSファイルに分けるのが基本 -->
+<style>
+  /* 要素セレクタ: タグ名で指定。.reveal を付けてテーマCSSより詳細度を上げる */
+  .reveal h1 {
+    color: #ff6347;
+  }
+  /* クラスセレクタ: .クラス名 で指定。複数の要素に使い回せる */
+  .highlight {
+    color: #00ff88;
+  }
+  /* IDセレクタ: #ID名 で指定。ページ内で1つだけの要素に使う */
+  #main-title {
+    font-size: 3em;
+  }
+  /* color = 文字色、text-align = 文字揃え（center で中央） */
+  .reveal h2 {
+    color: #5bc0de;
+    text-align: center;
+  }
+  /* font-size = 文字サイズ（em は親要素に対する相対値）、font-weight = 太さ */
+  .reveal p {
+    font-size: 0.9em;
+    font-weight: bold;
+  }
+  /* background-color = 背景色、padding = 内側余白、margin = 外側余白、border = 枠線 */
+  /* この4つが Box Model（content → padding → border → margin）を構成する */
+  .reveal blockquote {
+    background-color: #333;
+    padding: 30px;
+    margin: 20px auto;
+    border: 2px solid #5bc0de;
+  }
+  /* Flexbox: display: flex で子要素を横並び、justify-content で中央揃え */
+  /* gap = 要素間のスペース、list-style: none = 箇条書きの「・」を消す */
+  .reveal .feature-list {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    list-style: none;
+  }
+  /* 擬似クラス :hover = マウスが乗ったときだけ適用されるスタイル */
+  .reveal a:hover {
+    color: #ff6347;
+    text-decoration: underline;
+  }
+  /* font-family = フォント指定。Google Fonts から読み込んだフォントを適用 */
+  .reveal {
+    font-family: 'Dela Gothic One', sans-serif;
+  }
+</style>
+
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+      <section>
+        <h1 id="main-title">Hello, reveal.js</h1>
+      </section>
+
+      <section>
+        <h2>reveal.jsとは</h2>
+        <p>HTML・CSS・JSで作るプレゼンテーションフレームワーク</p>
+      </section>
+
+      <section>
+        <h2>reveal.jsの特徴</h2>
+        <ul class="feature-list">
+          <li>HTMLファイル1つで動く</li>
+          <li>テーマを切り替えられる</li>
+          <li>スピーカーノートが使える</li>
+          <li class="highlight">LLMと相性が良い</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>参考リンク</h2>
+        <a href="https://revealjs.com/" target="_blank">reveal.js 公式サイト</a>
+        <br>
+        <img src="https://revealjs.com/images/logo/reveal-black-text-sticker.png" alt="reveal.js ロゴ" width="300">
+      </section>
+
+      <section>
+        <h2>テキストの強調</h2>
+        <p>reveal.jsは<strong>HTML・CSS</strong>で作るフレームワークです。</p>
+        <p><em>予備知識は不要</em>で始められます。</p>
+      </section>
+
+      <section>
+        <h2>コードの表示</h2>
+        <p>インラインコード: <code>console.log("Hello")</code> タグ</p>
+        <pre><code>const name = "reveal.js";<br>console.log("Hello, " + name);</code></pre>
+      </section>
+
+      <section>
+        <h2>引用</h2>
+        <blockquote>
+          HTML・CSSは"Webサイトを作る技術"ではなく、画面に表示するものをデザインする技術。
+        </blockquote>
+      </section>
+
+      <section>
+        <h2>段階表示(fragment)</h2>
+        <p class="fragment">1. セットアップ（CDN + 最小構成）</p>
+        <p class="fragment">2. HTML基礎</p>
+        <p class="fragment">3. CSS基礎</p>
+        <p class="fragment">4. Bootstrap</p>
+      </section>
+
+      <section data-background-color="#f0f0f0">
+        <h2>背景色の変更</h2>
+        <p>data-background-color でスライドごとに背景色を変えられる</p>
+      </section>
+
+      <section>
+        <section>
+          <h2>縦スライド1枚目</h2>
+          <p>下キーで次へ</p>
+        </section>
+        <section>
+          <h2>縦スライド2枚目</h2>
+          <p>sectionをネストすると縦方向に遷移できる</p>
+        </section>
+      </section>
+
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/notes/notes.js"></script>
+  <script>
+    Reveal.initialize({
+      plugins: [RevealNotes]
+    });
+  </script>
+</body>
+</html>

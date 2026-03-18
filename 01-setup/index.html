@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>reveal.js 入門</title>
+
+  <!-- reveal.js 本体のCSS（レイアウト・スライド遷移などの基本スタイル） -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.css">
+  <!-- テーマCSS（見た目の配色・フォント。black以外にも white, moon, night 等がある） -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/theme/black.css">
+
+</head>
+<body>
+  <!-- reveal.js のルートコンテナ。このクラス名は固定 -->
+  <div class="reveal">
+    <!-- 全スライドを囲むコンテナ -->
+    <div class="slides">
+      <!-- 1枚のスライド = 1つの <section>。スライドを増やすには <section> を追加する -->
+      <section>
+        <h1>Hello, reveal.js</h1>
+      </section>
+    </div>
+  </div>
+
+  <!-- reveal.js 本体のJavaScript（CDNから読み込み） -->
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.js"></script>
+  <script>
+    // reveal.js を初期化（これがないとスライドが動作しない）
+    Reveal.initialize();
+  </script>
+</body>
+</html>
