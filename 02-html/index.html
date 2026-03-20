@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
+  <!-- meta charset: 文字コードをUTF-8に指定（日本語の文字化け防止） -->
   <meta charset="UTF-8">
+  <!-- meta viewport: スマホ表示時のレイアウト制御 -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- title: ブラウザのタブに表示されるタイトル -->
   <title>reveal.js 入門</title>
 
+  <!-- link: 外部CSSファイルの読み込み。rel="stylesheet" でCSS用と指定 -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/theme/black.css">
 
@@ -14,6 +18,7 @@
     <div class="slides">
 
       <!-- ===== 1枚目: タイトル ===== -->
+      <!-- <h1> = 最も大きな見出し（heading 1）。ページに1つが基本 -->
       <section>
         <h1>Hello, reveal.js</h1>
         <aside class="notes">
@@ -22,15 +27,17 @@
       </section>
 
       <!-- ===== 2枚目: reveal.jsの説明 ===== -->
-      <!-- <h2> = 2番目の見出し。<p> = 段落（パラグラフ） -->
+      <!-- <h2> = 2番目の見出し。スライドのタイトルに最適 -->
+      <!-- <p> = 段落（paragraph）。テキストのまとまりを表す -->
       <section>
         <h2>reveal.jsとは</h2>
         <p>HTML・CSS・JSで作るプレゼンテーションフレームワーク</p>
       </section>
 
       <!-- ===== 3枚目: 箇条書き ===== -->
-      <!-- <ul> = 順序なしリスト（Unordered List）、<li> = リスト項目（List Item） -->
-      <!-- <ul> を <ol>（Ordered List）に変えると番号付きリストになる -->
+      <!-- <ul> = 順序なしリスト（Unordered List）。「・」付きの箇条書き -->
+      <!-- <ol> = 順序付きリスト（Ordered List）。番号付きリスト。<ul>を<ol>に変えるだけ -->
+      <!-- <li> = リスト項目（List Item）。<ul>または<ol>の子要素として使う -->
       <section>
         <h2>reveal.jsの特徴</h2>
         <ul>
@@ -42,18 +49,20 @@
       </section>
 
       <!-- ===== 4枚目: リンクと画像 ===== -->
-      <!-- <a> = リンク。href にURL、target="_blank" で別タブ -->
-      <!-- <img> = 画像。src にURL、alt に代替テキスト、width でサイズ調整 -->
-      <!-- <br> = 改行 -->
+      <!-- <a> = リンク（anchor）。href属性にURLを指定。target="_blank" で別タブで開く -->
+      <!-- <img> = 画像。src属性に画像URL、alt属性に代替テキスト、width/heightでサイズ調整 -->
+      <!-- <br> = 改行（break）。終了タグなしの空要素 -->
+      <!-- <hr> = 水平線（horizontal rule）。セクションの区切りに使う。これも空要素 -->
       <section>
         <h2>参考リンク</h2>
         <a href="https://revealjs.com/" target="_blank">reveal.js 公式サイト</a>
-        <br>
+        <hr>
         <img src="https://revealjs.com/images/logo/reveal-black-text-sticker.png" alt="reveal.js ロゴ" width="300">
       </section>
 
       <!-- ===== 5枚目: テキストの強調 ===== -->
-      <!-- <strong> = 太字（重要なキーワード）、<em> = 斜体（補足的な強調） -->
+      <!-- <strong> = 太字の強調（重要なキーワードに使う） -->
+      <!-- <em> = 斜体の強調（emphasis。補足的な強調に使う） -->
       <section>
         <h2>テキストの強調</h2>
         <p>reveal.jsは<strong>HTML・CSS</strong>で作るフレームワークです。</p>
@@ -61,7 +70,8 @@
       </section>
 
       <!-- ===== 6枚目: コードの表示 ===== -->
-      <!-- <code> = インラインコード、<pre> = 整形済みテキスト（改行・空白を保持） -->
+      <!-- <code> = インラインコード。文中にコードを埋め込むときに使う -->
+      <!-- <pre> = 整形済みテキスト（preformatted）。改行・空白をそのまま表示する -->
       <!-- <pre><code> の組み合わせでコードブロックになる -->
       <section>
         <h2>コードの表示</h2>
@@ -70,7 +80,7 @@
       </section>
 
       <!-- ===== 7枚目: 引用 ===== -->
-      <!-- <blockquote> = 引用。テーマによってインデントや装飾が自動で付く -->
+      <!-- <blockquote> = 引用ブロック。テーマによってインデントや装飾が自動で付く -->
       <section>
         <h2>引用</h2>
         <blockquote>
@@ -113,6 +123,7 @@
     </div>
   </div>
 
+  <!-- script: JavaScriptファイルの読み込み。bodyの末尾に置くのが基本 -->
   <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.js"></script>
   <!-- スピーカーノート用プラグイン（Sキーでノート画面を開く） -->
   <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/notes/notes.js"></script>
