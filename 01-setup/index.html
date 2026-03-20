@@ -17,17 +17,25 @@
     <!-- 全スライドを囲むコンテナ -->
     <div class="slides">
       <!-- 1枚のスライド = 1つの <section>。スライドを増やすには <section> を追加する -->
+      <!-- スピーカーノート: <aside class="notes"> にメモを書くと、Sキーで別ウィンドウに表示される -->
       <section>
         <h1>Hello, reveal.js</h1>
+        <aside class="notes">
+          これはスピーカーノートです。Sキーを押すとこのメモが別ウィンドウに表示されます。
+        </aside>
       </section>
     </div>
   </div>
 
   <!-- reveal.js 本体のJavaScript（CDNから読み込み） -->
   <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.js"></script>
+  <!-- スピーカーノート用プラグイン（Sキーでノート画面を開く） -->
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/notes/notes.js"></script>
   <script>
     // reveal.js を初期化（これがないとスライドが動作しない）
-    Reveal.initialize();
+    Reveal.initialize({
+      plugins: [RevealNotes]
+    });
   </script>
 </body>
 </html>
