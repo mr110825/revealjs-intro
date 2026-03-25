@@ -65,6 +65,10 @@ HTML・CSS・Bootstrapで学ぶreveal.jsスライド作成入門
 - アラート（`alert`）
 - ユーティリティクラス（`text-center`, `p-2`, `mb-3`, `rounded`）
 
+## 関連記事
+
+- [HTML/CSS入門をreveal.jsスライド作りで実践する](https://zenn.dev/mr110825/scraps/afbe68a87a68ad) - このリポジトリの内容をZenn Scrapで解説しています
+
 ## 参考リンク
 
 - [reveal.js 公式サイト](https://revealjs.com/)
